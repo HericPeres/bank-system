@@ -54,7 +54,7 @@ sistema-banco/
 - Pip (gerenciador de pacotes Python)
 - Git (opcional)
 
-### 1. Clonar o repositório
+### 1. Clonar o "repositório"
 ```bash
 git clone https://github.com/seu-usuario/bank-system.git
 cd bank-system
