@@ -47,8 +47,6 @@ sistema-banco/
 └── docker-compose.yml
 ```
 
-text
-
 ## 🛠️ Instalação e Configuração
 
 ### Pré-requisitos
