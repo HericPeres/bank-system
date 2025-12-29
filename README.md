@@ -15,7 +15,9 @@ Um sistema bancário completo que integra processamento batch em COBOL com APIs 
 - **Docker** - Containerização (opcional)
 
 ## 📁 Estrutura do Projeto
-bank-system/
+
+```
+sistema-banco/
 ├── cobol/
 │   ├── src/
 │   │   ├── CBL0001.cob
@@ -27,7 +29,7 @@ bank-system/
 │   │   └── main.py
 │   ├── dashboard/
 │   │   └── app.py
-│   ├── fraud_detection/
+│   ├── detecção_de_fraude/
 │   │   └── train_model.py
 │   ├── loader/
 │   │   └── file_monitor.py
@@ -43,6 +45,7 @@ bank-system/
 │       └── Dockerfile
 ├── docs/
 └── docker-compose.yml
+```
 
 text
 
