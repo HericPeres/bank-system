@@ -76,7 +76,7 @@ sistema-banco/
 ### Clonar o "repositório"
 
 ```bash
-git clone https://github.com/seu-usuario/bank-system.git
+git clone https://github.com/HericPeres/bank-system.git
 cd bank-system
 Criar e ativar ambiente virtual (recomendado)
 python -m venv .venv
@@ -164,37 +164,28 @@ curl http://localhost:8000/status
 
 ⚙️ Funcionalidades
 
-Processamento COBOL:
-
-Processamento batch de transações
-
-Geração de arquivos
-
-Simulação de integração com sistemas legados
+.Processamento COBOL.
+.Processamento batch de transações
+.Geração de arquivos
+.Simulação de integração com sistemas legados
 
 API REST:
 
-FastAPI com documentação automática
-
-Validação de dados com Pydantic
-
-Endpoints para contas e transações
+.FastAPI com documentação automática
+.Validação de dados com Pydantic
+.Endpoints para contas e transações
 
 Dashboard:
 
-Métricas bancárias
-
-Gráficos de transações
-
-Status do processamento COBOL
+.Métricas bancárias
+.Gráficos de transações
+.Status do processamento COBOL
 
 Detecção de Fraudes:
 
-Modelo de machine learning
-
-Score de risco por transação
-
-Base para análise em tempo real
+.Modelo de machine learning
+.Score de risco por transação
+.Base para análise em tempo real
 
 🔧 Configuração Avançada
 
@@ -253,7 +244,7 @@ streamlit==1.29.0
 python-dotenv==1.0.0
 watchdog==3.0.0
 
-👨‍💻 Autor
+👨‍💻 Desenvolvedor
 
 Heric Rodrigues Peres
 Email: hericperes9@gmail.com
