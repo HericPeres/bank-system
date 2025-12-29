@@ -72,6 +72,7 @@ source .venv/bin/activate
 bash
 cd python
 pip install -r requirements.txt
+
 🚀 Como Executar
 Opção 1: Executar sem Docker (Recomendado para desenvolvimento)
 A. Executar a API FastAPI
@@ -129,34 +130,39 @@ curl http://localhost:8000/contas
 
 # Status do sistema
 curl http://localhost:8000/status
+
 🎯 Funcionalidades
-1. Processamento COBOL
+1️⃣ Processamento COBOL
+
 Processamento batch de transações
 
-Geração de arquivos de saída
+Geração de arquivos
 
-Integração com sistemas legados
+Simulação de integração com sistemas legados
 
-2. API REST Moderna
-Documentação automática (Swagger/OpenAPI)
+2️⃣ API REST
 
-Validação de dados com Pydantic
+FastAPI com documentação automática
 
-Rotas para contas e transações
+Validação com Pydantic
 
-3. Dashboard em Tempo Real
-Métricas bancárias
+Endpoints para contas e transações
+
+3️⃣ Dashboard
+
+Visualização de métricas bancárias
 
 Gráficos de transações
 
-Status da integração COBOL
+Status do processamento COBOL
 
-4. Detecção de Fraudês
+4️⃣ Detecção de Fraudes
+
 Modelo de machine learning
 
-Análise em tempo real
-
 Score de risco por transação
+
+Base para análise em tempo real
 
 🔧 Configuração Avançada
 Banco de Dados PostgreSQL
@@ -171,6 +177,7 @@ env
 DATABASE_URL=postgresql://bankuser:bankpass@localhost:5432/bankdb
 SECRET_KEY=sua-chave-secreta-aqui
 DEBUG=True
+
 Configuração do COBOL
 bash
 # Instalar GnuCOBOL no Windows (via WSL)
@@ -180,11 +187,13 @@ wsl --install
 # Compilar programa COBOL
 cd cobol
 cobc -x -o bin/programa src/CBL0001.cob
+
 🧪 Testes
 bash
 # Executar testes (em desenvolvimento)
 cd python
 python -m pytest tests/
+
 📈 Monitoramento
 Logs da API
 bash
@@ -200,9 +209,6 @@ Documentação API: http://localhost:8000/docs
 
 Health Check: http://localhost:8000/status
 
-🤝 Contribuição
-Fork o projeto
-
 Crie uma branch (git checkout -b feature/nova-funcionalidade)
 
 Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
@@ -210,9 +216,6 @@ Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
 Push para a branch (git push origin feature/nova-funcionalidade)
 
 Abra um Pull Request
-
-📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 🆘 Suporte
 Problemas Comuns
@@ -229,30 +232,6 @@ Porta já em uso
 Mude a porta no arquivo api/main.py (linha port=8000)
 
 Erro de banco de dados
-
-bash
-# Verificar se PostgreSQL está rodando
-# Criar banco manualmente se necessário
-Contato
-Issues: GitHub Issues
-
-Email: seu-email@exemplo.com
-
-Desenvolvido com ❤️ para integração de sistemas legados com tecnologias modernas.
-
-text
-
-## **PARA USAR:**
-
-1. **Copie todo este texto**
-2. **Crie/Abra o arquivo** `README.md` na pasta principal `bank-system`
-3. **Cole o conteúdo**
-4. **Salve** (Ctrl+S)
-
-## **BÔNUS: Criar também um `requirements.txt` completo:**
-
-Crie/Atualize `python/requirements.txt` com:
-
 ```txt
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
