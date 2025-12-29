@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # Banco de dados PostgreSQL
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: bankdb
+      POSTGRES_USER: bankuser
+      POSTGRES_PASSWORD: bankpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # Ambiente COBOL
+  cobol:
+    build: ./docker/cobol
+    volumes:
+      - ./cobol:/app/cobol
+      - ./shared_data:/shared_data
+    working_dir: /app/cobol
+
+  # API Python
+  api:
+    build: ./docker/python
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./python:/app/python
+      - ./shared_data:/shared_data
+    depends_on:
+      - postgres
+    command: >
+      sh -c "cd /app/python &&
+             pip install -r requirements.txt &&
+             uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload"
+
+  # Dashboard
+  dashboard:
+    build: ./docker/python
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./python:/app/python
+    depends_on:
+      - postgres
+      - api
+    command: >
+      sh -c "cd /app/python &&
+             streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0"
+
+volumes:
+  postgres_data:
+  shared_data:
