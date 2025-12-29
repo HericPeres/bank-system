@@ -17,43 +17,25 @@ Um sistema bancário completo que integra processamento batch em COBOL com APIs 
 ## 📁 Estrutura do Projeto
 bank-system/
 ├── cobol/ # Código COBOL
-
 │ ├── src/ # Programas COBOL
-
 │ │ ├── CBL0001.cob # Programa principal
-
 │ │ └── JCL/ # Scripts de controle
-
 │ ├── data/ # Arquivos de dados
-
 │ └── scripts/ # Scripts de execução
-
 ├── python/ # Código Python
-
 │ ├── api/ # API FastAPI
-
 │ │ └── main.py # API principal
-
 │ ├── dashboard/ # Dashboard Streamlit
-
 │ │ └── app.py # Dashboard principal
-
 │ ├── fraud_detection/ # ML para detecção de fraudes
 
 │ ├── loader/ # Integração COBOL-Python
-
 │ ├── tests/ # Testes
-
 │ ├── utils/ # Utilitários
-
 │ └── requirements.txt # Dependências Python
-
 ├── database/ # Scripts do banco de dados
-
 ├── docker/ # Configurações Docker
-
 ├── docs/ # Documentação
-
 └── docker-compose.yml # Orquestração de containers
 
 text
